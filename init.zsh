@@ -9,7 +9,7 @@ p6df::modules::perl::external::brew() {
 
 p6df::modules::perl::init() {
 
-#  p6df::modules::perl::plenv::init
+  p6df::modules::perl::plenv::init
 }
 
 p6df::modules::perl::plenv::init() {
@@ -30,5 +30,3 @@ p6df::prompt::perl::line() {
 
   env_version "pl"
 }
-
-p6df::modules::perl::init
