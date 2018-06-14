@@ -1,6 +1,7 @@
 p6df::modules::perl::version() { echo "0.0.1" }
 p6df::modules::perl::deps()    {
 	ModuleDeps=(
+		p6m7g8/p6perl
 	)
 }
 
