@@ -10,13 +10,15 @@ p6df::modules::perl::external::brew() {
 
 p6df::modules::perl::init() {
 
-  p6df::modules::perl::plenv::init
+    p6df::modules::perl::plenv::init "$P6_DFZ_SRC_DIR"
 }
 
 p6df::modules::perl::plenv::init() {
+    local dir="$1"
+
     [ -n "$DISABLE_ENVS" ] && return
 
-    PLENV_ROOT=/Users/pgollucci/.local/share/tokuhirom/plenv
+    PLENV_ROOT=$dir/tokuhirom/plenv
 
     if [ -x $PLENV_ROOT/bin/plenv ]; then
       export PLENV_ROOT
