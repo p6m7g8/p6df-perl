@@ -24,7 +24,7 @@ p6df::modules::perl::plenv::init() {
       export PLENV_ROOT
       export HAS_PLENV=1
 
-      p6dfz::util::path_if $PLENV_ROOT/bin
+      p6df::util::path_if $PLENV_ROOT/bin
       eval "$(plenv init - zsh)"
     fi
 }
