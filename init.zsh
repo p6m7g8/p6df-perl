@@ -6,6 +6,12 @@ p6df::modules::perl::deps()    {
 }
 
 p6df::modules::perl::external::brew() {
+
+}
+
+p6df::modules::perl::home::symlink() {
+
+  # XXX: ENV move
 }
 
 p6df::modules::perl::init() {
