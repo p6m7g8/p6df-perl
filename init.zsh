@@ -17,6 +17,7 @@ p6df::modules::perl::langs() {
 
   plenv install 5.28.2
   plenv global 5.28.2
+  plenv rehash
 
   plenv install-cpanm
   plenv rehash
