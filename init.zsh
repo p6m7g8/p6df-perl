@@ -56,5 +56,5 @@ p6df::modules::perl::plenv::init() {
 
 p6df::prompt::perl::line() {
 
-  env_version "pl"
+  p6_lang_version "pl"
 }
