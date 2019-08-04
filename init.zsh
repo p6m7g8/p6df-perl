@@ -15,8 +15,8 @@ p6df::modules::perl::home::symlink() {
 
 p6df::modules::perl::langs() {
 
-  plenv install 5.28.2
-  plenv global 5.28.2
+  plenv install 5.30.0
+  plenv global 5.30.0
   plenv rehash
 
   plenv install-cpanm
