@@ -56,5 +56,10 @@ p6df::modules::perl::plenv::init() {
 
 p6df::prompt::perl::line() {
 
+  p6_perl_prompt_info
+}
+
+p6_perl_prompt_info() {
+
   p6_lang_version "pl"
 }
