@@ -95,18 +95,18 @@ p6df::modules::perl::plenv::init() {
     export HAS_PLENV=1
 
     p6df::util::path_if $PLENV_ROOT/bin
-    eval "$(plenv init - zsh)"
+    eval "$(p6_run_code plenv init - zsh)"
   fi
 }
 
 ######################################################################
 #<
 #
-# Function: p6df::prompt::perl::line()
+# Function: p6df::modules::perl::prompt::line()
 #
 #>
 ######################################################################
-p6df::prompt::perl::line() {
+p6df::modules::perl::prompt::line() {
 
   p6_perl_prompt_info
 }
@@ -120,5 +120,6 @@ p6df::prompt::perl::line() {
 ######################################################################
 p6_perl_prompt_info() {
 
+  echo -n "pl:\t  "
   p6_lang_version "pl"
 }
