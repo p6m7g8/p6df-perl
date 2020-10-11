@@ -5,6 +5,6 @@
 - p6df::modules::perl::init()
 - p6df::modules::perl::langs()
 - p6df::modules::perl::plenv::init(dir)
+- p6df::modules::perl::prompt::line()
 - p6df::modules::perl::version()
-- p6df::prompt::perl::line()
 
