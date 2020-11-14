@@ -80,7 +80,7 @@ p6df::modules::perl::init() {
 # Function: p6df::modules::perl::plenv::init(dir)
 #
 #  Args:
-#	dir - 
+#	dir -
 #
 #>
 ######################################################################
