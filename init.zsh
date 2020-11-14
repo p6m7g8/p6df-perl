@@ -5,12 +5,12 @@
 #
 #>
 ######################################################################
-p6df::modules::perl::deps()    {
-	ModuleDeps=(
-		p6m7g8/p6perl
-		tokuhirom/plenv
-		tokuhirom/Perl-Build
-	)
+p6df::modules::perl::deps() {
+  ModuleDeps=(
+    p6m7g8/p6perl
+    tokuhirom/plenv
+    tokuhirom/Perl-Build
+  )
 }
 
 ######################################################################
@@ -35,15 +35,21 @@ p6df::modules::perl::home::symlink() {
 ######################################################################
 p6df::modules::perl::langs() {
 
-  (cd $P6_DFZ_SRC_DIR/tokuhirom/plenv ; git pull)
-  (cd $P6_DFZ_SRC_DIR/tokuhirom/Perl-Build ; git pull)
+  (
+    cd $P6_DFZ_SRC_DIR/tokuhirom/plenv
+    git pull
+  )
+  (
+    cd $P6_DFZ_SRC_DIR/tokuhirom/Perl-Build
+    git pull
+  )
 
   # nuke the old one
-  local previous=$(plenv install -l | grep "5\.[0-9][02468]\." | head -2 |sed -e 's, *,,g')
+  local previous=$(plenv install -l | grep "5\.[0-9][02468]\." | head -2 | sed -e 's, *,,g')
   plenv uninstall -f $previous
 
   # get the shiny one
-  local latest=$(plenv install -l | grep "5\.[0-9][02468]\." | head -1 |sed -e 's, *,,g')
+  local latest=$(plenv install -l | grep "5\.[0-9][02468]\." | head -1 | sed -e 's, *,,g')
   plenv install $latest
   plenv global $latest
   plenv rehash
@@ -51,13 +57,14 @@ p6df::modules::perl::langs() {
   plenv install-cpanm
   plenv rehash
 
-  cpanm --self-upgrade  
+  cpanm --self-upgrade
 
   cpanm --force Template \
-        LWP::UserAgent \
-        JSON \
-        MIME::Lite \
-        Text::Replace
+    LWP::UserAgent \
+    JSON \
+    MIME::Lite \
+    Text::Replace \
+    Perl::Tidy
 
   plenv rehash
 }
@@ -80,7 +87,7 @@ p6df::modules::perl::init() {
 # Function: p6df::modules::perl::plenv::init(dir)
 #
 #  Args:
-#	dir - 
+#	dir -
 #
 #>
 ######################################################################
