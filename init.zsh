@@ -35,8 +35,17 @@ p6df::modules::perl::home::symlink() {
 ######################################################################
 p6df::modules::perl::langs() {
 
-  plenv install 5.30.2
-  plenv global 5.30.2
+  (cd $P6_DFZ_SRC_DIR/tokuhirom/plenv ; git pull)
+  (cd $P6_DFZ_SRC_DIR/tokuhirom/Perl-Build ; git pull)
+
+  # nuke the old one
+  local previous=$(plenv install -l | grep "5\.[0-9][02468]\." | head -2 |sed -e 's, *,,g')
+  plenv uninstall -f $previous
+
+  # get the shiny one
+  local latest=$(plenv install -l | grep "5\.[0-9][02468]\." | head -1 |sed -e 's, *,,g')
+  plenv install $latest
+  plenv global $latest
   plenv rehash
 
   plenv install-cpanm
