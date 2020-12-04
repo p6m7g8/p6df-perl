@@ -59,7 +59,7 @@ p6df::modules::perl::langs() {
 
   cpanm --self-upgrade
 
-  cpanm --force Template \
+  cpanm --force --notest Template \
     LWP::UserAgent \
     JSON \
     MIME::Lite \
