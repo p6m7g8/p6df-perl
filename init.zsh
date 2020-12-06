@@ -110,6 +110,19 @@ p6df::modules::perl::plenv::init() {
 ######################################################################
 #<
 #
+# Function: p6df::modules::perl::plenv::prompt::line()
+#
+#>
+######################################################################
+p6df::modules::perl::plenv::prompt::line() {
+
+  p6_echo "plenv:\t  plenv_root=$PLENV_ROOT
+plenv:\t  perl5lib=$PERL5LIB"
+}
+
+######################################################################
+#<
+#
 # Function: p6df::modules::perl::prompt::line()
 #
 #>
