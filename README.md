@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6df-perl:
+
+#### p6df-perl/init.zsh:
 
 - p6_perl_prompt_info()
 - p6df::modules::perl::deps()
