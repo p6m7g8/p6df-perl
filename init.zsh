@@ -22,8 +22,10 @@ p6df::modules::perl::deps() {
 ######################################################################
 p6df::modules::perl::home::symlink() {
 
-  mkdir -p $P6_DFZ_SRC_DIR/tokuhirom/plenv/plugins
-  ln -fs $P6_DFZ_SRC_DIR/tokuhirom/Perl-Build $P6_DFZ_SRC_DIR/tokuhirom/plenv/plugins/perl-build
+  echo mkdir -p $P6_DFZ_SRC_DIR/tokuhirom/plenv/plugins
+  echo ln -fs $P6_DFZ_SRC_DIR/tokuhirom/Perl-Build $P6_DFZ_SRC_DIR/tokuhirom/plenv/plugins/perl-build
+#  mkdir -p $P6_DFZ_SRC_DIR/tokuhirom/plenv/plugins
+#  ln -fs $P6_DFZ_SRC_DIR/tokuhirom/Perl-Build $P6_DFZ_SRC_DIR/tokuhirom/plenv/plugins/perl-build
 }
 
 ######################################################################
