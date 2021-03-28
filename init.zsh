@@ -16,8 +16,24 @@ p6df::modules::perl::deps() {
 ######################################################################
 #<
 #
+# Function: p6df::modules::perl::vscodes()
+#
+#>
+######################################################################
+p6df::modules::perl::vscodes() {
+
+  # perl
+  cpanm --force --notest Perl::LanguageServer
+  code --install-extension richterger.perl
+  code --install-extension sfodje.perltidy
+}
+
+######################################################################
+#<
+#
 # Function: p6df::modules::perl::home::symlink()
 #
+#  Environment:	 P6_DFZ_SRC_DIR
 #>
 ######################################################################
 p6df::modules::perl::home::symlink() {
@@ -31,6 +47,7 @@ p6df::modules::perl::home::symlink() {
 #
 # Function: p6df::modules::perl::langs()
 #
+#  Environment:	 JSON LWP MIME P6_DFZ_SRC_DIR
 #>
 ######################################################################
 p6df::modules::perl::langs() {
@@ -74,6 +91,7 @@ p6df::modules::perl::langs() {
 #
 # Function: p6df::modules::perl::init()
 #
+#  Environment:	 P6_DFZ_SRC_DIR
 #>
 ######################################################################
 p6df::modules::perl::init() {
@@ -89,6 +107,7 @@ p6df::modules::perl::init() {
 #  Args:
 #	dir -
 #
+#  Environment:	 DISABLE_ENVS HAS_PLENV PLENV_ROOT
 #>
 ######################################################################
 p6df::modules::perl::plenv::init() {
@@ -112,6 +131,8 @@ p6df::modules::perl::plenv::init() {
 #
 # Function: p6df::modules::perl::plenv::prompt::line()
 #
+#  Depends:	 p6_echo
+#  Environment:	 PERL5LIB PLENV_ROOT
 #>
 ######################################################################
 p6df::modules::perl::plenv::prompt::line() {
@@ -137,6 +158,7 @@ p6df::modules::perl::prompt::line() {
 #
 # Function: p6_perl_prompt_info()
 #
+#  Depends:	 p6_lang
 #>
 ######################################################################
 p6_perl_prompt_info() {
