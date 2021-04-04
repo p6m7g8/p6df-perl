@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/p6m7g8/p6df-perl/compare/v2.1.0...v2.1.1) (2021-04-04)
+
+
+* **README:** updates generator ([#18](https://github.com/p6m7g8/p6df-perl/issues/18)) ([c0761e9](https://github.com/p6m7g8/p6df-perl/commit/c0761e9ac58d277b457a9b9ccf011d8400337d65))
+* **vscode:** splits vscode extensions to their languages ([#20](https://github.com/p6m7g8/p6df-perl/issues/20)) ([aa659d2](https://github.com/p6m7g8/p6df-perl/commit/aa659d2f65a4ea4ec7c0c70c8b1b13f90b5a52bc))
+* Coc -> .github ([28b4580](https://github.com/p6m7g8/p6df-perl/commit/28b4580070a192fbfb92362406d98a5d73b5bffd))
+* the great vscode indent of 2021 ([#19](https://github.com/p6m7g8/p6df-perl/issues/19)) ([7e24c01](https://github.com/p6m7g8/p6df-perl/commit/7e24c0166b42a45976ab3f32a74fc2ec4cb1e1b5))
+
 ## [2.1.0](https://github.com/p6m7g8/p6df-perl/compare/v2.0.0...v2.1.0) (2020-12-06)
 
 
